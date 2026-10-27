@@ -14,5 +14,19 @@
         }
     },
     "app": "Headlamp.app",
-    "notes": "Headlamp reads your clusters from ~/.kube/config (or $KUBECONFIG)."
+    "notes": "Headlamp reads your clusters from ~/.kube/config (or $KUBECONFIG).",
+    "checkver": {
+        "github": "kubernetes-sigs/headlamp",
+        "regex": "\"tag_name\":\\s*\"v(?<version>[\\d.]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://github.com/kubernetes-sigs/headlamp/releases/download/v$version/Headlamp-$version-mac-arm64.dmg"
+            },
+            "x86_64": {
+                "url": "https://github.com/kubernetes-sigs/headlamp/releases/download/v$version/Headlamp-$version-mac-x64.dmg"
+            }
+        }
+    }
 }
