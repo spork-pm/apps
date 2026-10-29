@@ -1,0 +1,30 @@
+{
+    "version": "2026.2.3.1-262.10968.170",
+    "description": "Cross-Platform IDE for .NET by JetBrains.",
+    "homepage": "https://www.jetbrains.com/rider/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.jetbrains.com/store/license.html"
+    },
+    "architecture": {
+        "arm64": {
+            "url": "https://download.jetbrains.com/rider/JetBrains.Rider-2026.2.3.1-aarch64.dmg",
+            "hash": "39aa927f579b95b766947fb8ca8fa78d495f6a1d5942a94f4104e1b873c45209"
+        }
+    },
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=RD&latest=true&platform=zip&type=release",
+        "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
+        "replace": "${ver}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://download.jetbrains.com/rider/JetBrains.Rider-$matchVer-aarch64.dmg"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
