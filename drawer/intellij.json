@@ -1,0 +1,36 @@
+{
+    "version": "2026.2.3-262.10968.63",
+    "description": "Cross-Platform IDE for Java by JetBrains.",
+    "homepage": "https://www.jetbrains.com/idea/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.jetbrains.com/legal/docs/toolbox/license/"
+    },
+    "app": "IntelliJ IDEA.app",
+    "notes": [
+        "IDEA Community Edition and Ultimate Edition have now been merged into a unified product.",
+        "IDEA Community 2025.2 is the last standalone version available to existing users only.",
+        "For more information, see: https://blog.jetbrains.com/idea/2025/12/intellij-idea-unified-release/"
+    ],
+    "architecture": {
+        "arm64": {
+            "url": "https://download.jetbrains.com/idea/idea-2026.2.3-aarch64.dmg",
+            "hash": "aac3cdc6d8441b94052473fee37a9679242a36f49f60fdce6cceaa3e7ad46e33"
+        }
+    },
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=II&latest=true&platform=zip&type=release",
+        "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
+        "replace": "${ver}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://download.jetbrains.com/idea/idea-$matchVer-aarch64.dmg"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
