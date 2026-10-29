@@ -12,6 +12,7 @@
             "hash": "39aa927f579b95b766947fb8ca8fa78d495f6a1d5942a94f4104e1b873c45209"
         }
     },
+    "app": "Rider.app",
     "checkver": {
         "url": "https://data.services.jetbrains.com/products/releases?code=RD&latest=true&platform=zip&type=release",
         "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
