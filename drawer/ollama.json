@@ -1,0 +1,21 @@
+{
+    "version": "0.40.13",
+    "description": "Run large language models locally (menu bar app and ollama CLI)",
+    "homepage": "https://ollama.com",
+    "license": "MIT",
+    "url": "https://github.com/ollama/ollama/releases/download/v0.40.13/Ollama-darwin.zip",
+    "hash": "sha256:da3189f87034d224beb0708d77b95180bc03872f6e269d59bd888a216055c58a",
+    "app": "Ollama.app",
+    "bin": [["Ollama.app/Contents/Resources/ollama", "ollama"]],
+    "notes": "Start Ollama from ~/Applications (or run `ollama serve`). If the app offers to install its command line tool, skip it: spork already links `ollama`. Models are stored in ~/.ollama and are kept when you uninstall.",
+    "checkver": {
+        "github": "ollama/ollama"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ollama/ollama/releases/download/v$version/Ollama-darwin.zip",
+        "hash": {
+            "url": "$baseurl/sha256sum.txt",
+            "regex": "([0-9a-f]{64})\\s+\\./Ollama-darwin\\.zip"
+        }
+    }
+}
