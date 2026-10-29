@@ -1,20 +1,22 @@
 {
     "version": "0.8.19",
-    "description": "A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+    "description": "Remap Logitech mouse buttons, DPI and SmartShift without Logitech Options+ (no account, no telemetry)",
     "homepage": "https://openlogi.org/",
     "license": "MIT",
     "architecture": {
         "arm64": {
             "url": "https://github.com/AprilNEA/OpenLogi/releases/download/v0.8.19/OpenLogi-v0.8.19-macos-arm64.dmg",
-            "hash": "308e172d4c2ce2a704536138818412fad42f1f958f72e7e9a80c88d92f95b4e3"
+            "hash": "sha256:308e172d4c2ce2a704536138818412fad42f1f958f72e7e9a80c88d92f95b4e3"
         }
     },
     "app": "OpenLogi.app",
-    "checkver": "github",
+    "checkver": {
+        "github": "AprilNEA/OpenLogi"
+    },
     "autoupdate": {
         "architecture": {
             "arm64": {
-                "url": "https://github.com/AprilNEA/OpenLogi/releases/download/v$version/OpenLogi-$version-macos-arm64.dmg"
+                "url": "https://github.com/AprilNEA/OpenLogi/releases/download/v$version/OpenLogi-v$version-macos-arm64.dmg"
             }
         }
     },
