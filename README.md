@@ -18,6 +18,7 @@ spork drawer add apps https://github.com/spork-pm/apps
 | `openlogi` | Remap Logitech mouse buttons, DPI and SmartShift without Logitech Options+ (no account, no telemetry) |
 | `rectangle` | Move and resize windows with keyboard shortcuts and snap areas |
 | `rider` | Cross-Platform IDE for .NET by JetBrains |
+| `stats` | macOS system monitor in your menu bar (open source alternative to iStat Menus) |
 
 ## Adding a package
 
