@@ -1,11 +1,8 @@
 {
     "version": "2026.2.3-262.10968.63",
-    "description": "Cross-Platform IDE for Java by JetBrains.",
+    "description": "Cross-Platform IDE for Java by JetBrains",
     "homepage": "https://www.jetbrains.com/idea/",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://www.jetbrains.com/legal/docs/toolbox/license/"
-    },
+    "license": "Proprietary",
     "app": "IntelliJ IDEA.app",
     "notes": [
         "IDEA Community Edition and Ultimate Edition have now been merged into a unified product.",
@@ -15,7 +12,7 @@
     "architecture": {
         "arm64": {
             "url": "https://download.jetbrains.com/idea/idea-2026.2.3-aarch64.dmg",
-            "hash": "aac3cdc6d8441b94052473fee37a9679242a36f49f60fdce6cceaa3e7ad46e33"
+            "hash": "sha256:aac3cdc6d8441b94052473fee37a9679242a36f49f60fdce6cceaa3e7ad46e33"
         }
     },
     "checkver": {

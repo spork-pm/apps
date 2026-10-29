@@ -13,7 +13,11 @@ spork drawer add apps https://github.com/spork-pm/apps
 | Package | Description |
 |---|---|
 | `headlamp` | A Kubernetes web UI that is fully-featured, user-friendly and extensible |
+| `intellij` | Cross-Platform IDE for Java by JetBrains |
+| `monitor-control` | Control your display's brightness & volume on your Mac as if it was a native Apple Display |
+| `openlogi` | Remap Logitech mouse buttons, DPI and SmartShift without Logitech Options+ (no account, no telemetry) |
 | `rectangle` | Move and resize windows with keyboard shortcuts and snap areas |
+| `rider` | Cross-Platform IDE for .NET by JetBrains |
 
 ## Adding a package
 
