@@ -1,13 +1,17 @@
 {
-    "version": "4.4",
+    "version": "4.4.0-265",
     "description": "Battery health and status monitoring tool for Mac",
     "homepage": "https://www.coconut-flavour.com/coconutbattery/",
     "license": "Proprietary",
-    "url": "https://www.coconut-flavour.com/downloads/coconutBattery_4_latest.zip",
+    "url": "https://www.coconut-flavour.com/downloads/coconutBattery_440_265.zip",
     "hash": "sha256:ac7bb9a5f02af6f1b7f3107ae3fb62268ec41e8d853a3df5ecee58bf0a51db4d",
     "app": "coconutBattery.app",
-    "checkver": "Download v([\\d.]+)",
+    "checkver": {
+        "url": "https://coconut-flavour.com/updates/coconutBattery_4.xml",
+        "regex": "<sparkle:version>(?<build>\\d+)</sparkle:version>\\s*<sparkle:shortVersionString>(?<ver>[\\d.]+)</sparkle:shortVersionString>[\\s\\S]*?/downloads/(?<file>coconutBattery_\\w+\\.zip)",
+        "replace": "${ver}-${build}"
+    },
     "autoupdate": {
-        "url": "https://www.coconut-flavour.com/downloads/coconutBattery_4_latest.zip"
+        "url": "https://www.coconut-flavour.com/downloads/$matchFile"
     }
 }
