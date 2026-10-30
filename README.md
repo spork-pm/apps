@@ -10,16 +10,8 @@ spork drawer add apps https://github.com/spork-pm/apps
 
 ## Packages
 
-| Package | Description |
-|---|---|
-| `headlamp` | A Kubernetes web UI that is fully-featured, user-friendly and extensible |
-| `intellij` | Cross-Platform IDE for Java by JetBrains |
-| `monitor-control` | Control your display's brightness & volume on your Mac as if it was a native Apple Display |
-| `ollama` | Run large language models locally (menu bar app and ollama CLI) |
-| `openlogi` | Remap Logitech mouse buttons, DPI and SmartShift without Logitech Options+ (no account, no telemetry) |
-| `rectangle` | Move and resize windows with keyboard shortcuts and snap areas |
-| `rider` | Cross-Platform IDE for .NET by JetBrains |
-| `stats` | macOS system monitor in your menu bar (open source alternative to iStat Menus) |
+Browse [drawer/](drawer/) for the full list: one JSON manifest per package, named after it.
+To search from the command line, run `spork search <term>`.
 
 ## Adding a package
 
