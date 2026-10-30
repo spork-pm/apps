@@ -20,5 +20,5 @@
             }
         }
     },
-    "notes": "OpenLogi requires accessibility access for most of its features and you might not be able to allow it"
+    "notes": "Grant OpenLogi Accessibility access in System Settings > Privacy & Security when it asks. On a Mac managed by your organisation, this may be blocked."
 }

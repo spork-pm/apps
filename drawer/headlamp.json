@@ -16,8 +16,7 @@
     "app": "Headlamp.app",
     "notes": "Headlamp reads your clusters from ~/.kube/config (or $KUBECONFIG).",
     "checkver": {
-        "github": "kubernetes-sigs/headlamp",
-        "regex": "\"tag_name\":\\s*\"v(?<version>[\\d.]+)\""
+        "github": "kubernetes-sigs/headlamp"
     },
     "autoupdate": {
         "architecture": {
