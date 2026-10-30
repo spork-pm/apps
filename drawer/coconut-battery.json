@@ -5,5 +5,9 @@
     "license": "Proprietary",
     "url": "https://www.coconut-flavour.com/downloads/coconutBattery_4_latest.zip",
     "hash": "sha256:ac7bb9a5f02af6f1b7f3107ae3fb62268ec41e8d853a3df5ecee58bf0a51db4d",
-    "app": "coconutBattery.app"
+    "app": "coconutBattery.app",
+    "checkver": "Download v([\\d.]+)",
+    "autoupdate": {
+        "url": "https://www.coconut-flavour.com/downloads/coconutBattery_4_latest.zip"
+    }
 }
