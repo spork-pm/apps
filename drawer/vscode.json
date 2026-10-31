@@ -1,0 +1,46 @@
+{
+    "version": "1.144.0",
+    "description": "Code editor from Microsoft, with debugging, Git integration and extensions",
+    "homepage": "https://code.visualstudio.com",
+    "license": "Proprietary",
+    "architecture": {
+        "arm64": {
+            "url": "https://update.code.visualstudio.com/1.144.0/darwin-arm64/stable#/VSCode-darwin-arm64.zip",
+            "hash": "sha256:cf2a21dbcb23c4213b91243e3cdd37197e9169f905652587113f16329fc92b87"
+        },
+        "x86_64": {
+            "url": "https://update.code.visualstudio.com/1.144.0/darwin/stable#/VSCode-darwin.zip",
+            "hash": "sha256:a15a04aaa109641bfbe5d1d6204fa96e7ff14e9fd7c495d89fa2376c3edc580b"
+        }
+    },
+    "app": "Visual Studio Code.app",
+    "bin": [
+        [
+            "Visual Studio Code.app/Contents/Resources/app/bin/code",
+            "code"
+        ]
+    ],
+    "notes": "The 'code' command is linked into ~/.spork/bin. VS Code updates itself in ~/Applications.",
+    "checkver": {
+        "url": "https://update.code.visualstudio.com/api/update/darwin-arm64/stable/latest",
+        "jsonpath": "$.productVersion"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://update.code.visualstudio.com/$version/darwin-arm64/stable#/VSCode-darwin-arm64.zip",
+                "hash": {
+                    "url": "https://update.code.visualstudio.com/api/versions/$version/darwin-arm64/stable",
+                    "jsonpath": "$.sha256hash"
+                }
+            },
+            "x86_64": {
+                "url": "https://update.code.visualstudio.com/$version/darwin/stable#/VSCode-darwin.zip",
+                "hash": {
+                    "url": "https://update.code.visualstudio.com/api/versions/$version/darwin/stable",
+                    "jsonpath": "$.sha256hash"
+                }
+            }
+        }
+    }
+}
