@@ -1,0 +1,16 @@
+{
+    "version": "1.14.5",
+    "description": "Private and flexible note-taking app built on Markdown files",
+    "homepage": "https://obsidian.md",
+    "license": "Proprietary",
+    "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.14.5/Obsidian-1.14.5.dmg",
+    "hash": "sha256:be79e6410d80fa705218aa4e8cb24ce8418cf16e13be4036227a5659b1f6aab2",
+    "app": "Obsidian.app",
+    "checkver": {
+        "github": "obsidianmd/obsidian-releases",
+        "regex": "download/v(?<version>[\\d.]+)/Obsidian-[\\d.]+\\.dmg"
+    },
+    "autoupdate": {
+        "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v$version/Obsidian-$version.dmg"
+    }
+}
