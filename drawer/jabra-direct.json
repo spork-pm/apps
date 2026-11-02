@@ -1,5 +1,5 @@
 {
-    "version": "0",
+    "version": "8.3.26701",
     "description": "Optimise and personalise your Jabra headset",
     "homepage": "https://www.jabra.com/software-and-services/jabra-direct",
     "license": "Proprietary",
@@ -34,5 +34,6 @@
     },
     "autoupdate": {
         "url": "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.dmg"
-    }
+    },
+    "hash": "sha256:606d90a7d94b550c0ba5093aa01a039cb9f55dea53ad05b707cfdc6d9b54f84c"
 }
