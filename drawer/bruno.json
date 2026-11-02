@@ -20,10 +20,10 @@
     "autoupdate": {
         "architecture": {
             "arm64": {
-                "url": "https://github.com/usebruno/bruno/releases/download/v$matchVer/bruno_$matchVer_arm64_mac.zip"
+                "url": "https://github.com/usebruno/bruno/releases/download/v$version/bruno_$version_arm64_mac.zip"
             },
             "x86_64": {
-                "url": "https://github.com/usebruno/bruno/releases/download/v$matchVer/bruno_$matchVer_x64_mac.zip"
+                "url": "https://github.com/usebruno/bruno/releases/download/v$version/bruno_$version_x64_mac.zip"
             }
         }
     }
