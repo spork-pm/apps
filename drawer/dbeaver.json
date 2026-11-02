@@ -1,0 +1,30 @@
+{
+    "version": "26.2.4",
+    "description": "Free universal database tool and SQL client",
+    "homepage": "https://dbeaver.io/",
+    "license": "MIT",
+    "architecture": {
+        "arm64": {
+            "url": "https://github.com/dbeaver/dbeaver/releases/download/26.2.4/dbeaver-ce-26.2.4-macos-aarch64.dmg",
+            "hash": "sha256:8d87a7c21f5c4723d26975c11042592d5bf503e1dc87aa5bba9e8067e551d2dc"
+        },
+        "x86_64": {
+            "url": "https://github.com/dbeaver/dbeaver/releases/download/26.2.4/dbeaver-ce-26.2.4-macos-x86_64.dmg",
+            "hash": "sha256:d3c1f4a7ad358a7b7256a5bb59982a9596fda1c3517961ca74609aed7b29409d"
+        }
+    },
+    "app": "DBeaver.app",
+    "checkver": {
+        "github": "dbeaver/dbeaver"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://github.com/dbeaver/dbeaver/releases/download/$version/dbeaver-ce-$version-macos-aarch64.dmg"
+            },
+            "x86_64": {
+                "url": "https://github.com/dbeaver/dbeaver/releases/download/$version/dbeaver-ce-$version-macos-x86_64.dmg"
+            }
+        }
+    }
+}
