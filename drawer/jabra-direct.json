@@ -1,0 +1,33 @@
+{
+    "version": "0",
+    "description": "Optimise and personalise your Jabra headset",
+    "homepage": "https://www.jabra.com/software-and-services/jabra-direct",
+    "license": "Proprietary",
+    "url": "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.dmg",
+    "pre_install": [
+        "# The download holds a .pkg installer, which spork doesn't run (it needs an admin).",
+        "# Unpack it and keep only the app.",
+        "pkgutil --expand-full \"$dir/JabraDirectSetup.pkg\" \"$dir/pkg\" || exit 1",
+        "app=$(find \"$dir/pkg\" -type d -name 'Jabra Direct.app' -prune | head -n 1)",
+        "if [ -z \"$app\" ]; then",
+        "  echo 'Jabra Direct.app not found in the installer. Apps in it:' >&2",
+        "  find \"$dir/pkg\" -type d -name '*.app' -prune >&2",
+        "  exit 1",
+        "fi",
+        "mv \"$app\" \"$dir/Jabra Direct.app\" && rm -rf \"$dir/pkg\" \"$dir/JabraDirectSetup.pkg\""
+    ],
+    "app": "Jabra Direct.app",
+    "notes": [
+        "Only the Jabra Direct app is installed. The drivers, kernel extension and login item that",
+        "Jabra's installer adds need an admin, so softphone call control and some headset features",
+        "may not work. Jabra Direct updates itself; its download has no fixed version, so a new",
+        "Jabra release can fail spork's checksum check until this drawer is updated."
+    ],
+    "checkver": {
+        "url": "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/jdo.json",
+        "jsonpath": "$.MacVersion"
+    },
+    "autoupdate": {
+        "url": "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.dmg"
+    }
+}
