@@ -6,27 +6,35 @@
     "url": "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.dmg",
     "pre_install": [
         "# The download holds a .pkg installer, which spork doesn't run (it needs an admin).",
-        "# Unpack it and keep only the app: one of its packages holds the contents of",
-        "# Jabra Direct.app (bundle com.jabra.directonline).",
-        "pkgutil --expand-full \"$dir/JabraDirectSetup.pkg\" \"$dir/pkg\" || exit 1",
+        "# Unpack all of it into the package folder and keep every file. spork then installs",
+        "# Jabra Direct.app, copied from the package whose payload is that bundle",
+        "# (com.jabra.directonline), so the unpacked installer stays complete.",
+        "x=\"$dir/.pkg-expand\"",
+        "pkgutil --expand-full \"$dir/JabraDirectSetup.pkg\" \"$x\" || exit 1",
+        "for p in \"$x\"/*; do",
+        "  [ -e \"$dir/${p##*/}\" ] && { echo \"$dir/${p##*/} already exists\" >&2; exit 1; }",
+        "  mv \"$p\" \"$dir/\" || exit 1",
+        "done",
+        "rmdir \"$x\"",
         "app=",
-        "for p in \"$dir\"/pkg/*.pkg/Payload; do",
+        "for p in \"$dir\"/*.pkg/Payload; do",
         "  id=$(plutil -extract CFBundleIdentifier raw -o - \"$p/Contents/Info.plist\" 2>/dev/null)",
         "  [ \"$id\" = com.jabra.directonline ] && { app=$p; break; }",
         "done",
         "if [ -z \"$app\" ]; then",
         "  echo 'Jabra Direct (com.jabra.directonline) not found in the installer. Packages in it:' >&2",
-        "  ls \"$dir/pkg\" >&2",
+        "  ls \"$dir\" >&2",
         "  exit 1",
         "fi",
-        "mv \"$app\" \"$dir/Jabra Direct.app\" && rm -rf \"$dir/pkg\" \"$dir/JabraDirectSetup.pkg\""
+        "ditto \"$app\" \"$dir/Jabra Direct.app\""
     ],
     "app": "Jabra Direct.app",
     "notes": [
         "Only the Jabra Direct app is installed. The drivers, kernel extension and login item that",
         "Jabra's installer adds need an admin, so softphone call control and some headset features",
-        "may not work. Jabra Direct updates itself; its download has no fixed version, so a new",
-        "Jabra release can fail spork's checksum check until this drawer is updated."
+        "may not work. The whole unpacked installer is kept in ~/.spork/apps/jabra-direct/current.",
+        "Jabra Direct updates itself; its download has no fixed version, so a new Jabra release",
+        "can fail spork's checksum check until this drawer is updated."
     ],
     "checkver": {
         "url": "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/jdo.json",
