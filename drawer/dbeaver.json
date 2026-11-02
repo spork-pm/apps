@@ -6,11 +6,11 @@
     "architecture": {
         "arm64": {
             "url": "https://github.com/dbeaver/dbeaver/releases/download/26.2.4/dbeaver-ce-26.2.4-macos-aarch64.dmg",
-            "hash": "sha256:8d87a7c21f5c4723d26975c11042592d5bf503e1dc87aa5bba9e8067e551d2dc"
+            "hash": "sha256:a1a10b2655d149f42a96874c7e769cec170fc92632d04dc793baa39825c0e8d3"
         },
         "x86_64": {
             "url": "https://github.com/dbeaver/dbeaver/releases/download/26.2.4/dbeaver-ce-26.2.4-macos-x86_64.dmg",
-            "hash": "sha256:d3c1f4a7ad358a7b7256a5bb59982a9596fda1c3517961ca74609aed7b29409d"
+            "hash": "sha256:f2480563fee951e57c492067f13ce674aa4ca246b0ceb07087836b545825eb6b"
         }
     },
     "app": "DBeaver.app",
