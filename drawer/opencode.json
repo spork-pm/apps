@@ -1,0 +1,30 @@
+{
+    "version": "1.19.5",
+    "description": "The open source coding agent",
+    "homepage": "https://opencode.ai/",
+    "license": "MIT",
+    "architecture": {
+        "arm64": {
+            "url": "https://github.com/anomalyco/opencode/releases/download/v1.19.5/opencode-desktop-mac-arm64.zip",
+            "hash": "sha256:cd9710eece3ab6ee6f39d19f2af837ae6ddbc23089715c021991e791fcf7bb97"
+        },
+        "x86_64": {
+            "url": "https://github.com/anomalyco/opencode/releases/download/v1.19.5/opencode-desktop-mac-x64.zip",
+            "hash": "sha256:5c0ed06b1d29bd780bffdad9ff2aca2816235b5cb1d0f381dd730f1245717b79"
+        }
+    },
+    "app": "OpenCode.app",
+    "checkver": {
+        "github": "anomalyco/opencode"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://github.com/anomalyco/opencode/releases/download/v$version/opencode-desktop-mac-arm64.zip"
+            },
+            "x86_64": {
+                "url": "https://github.com/anomalyco/opencode/releases/download/v$version/opencode-desktop-mac-x64.zip"
+            }
+        }
+    }
+}
