@@ -11,5 +11,6 @@
     },
     "autoupdate": {
         "url": "https://github.com/wr/mojito/releases/download/v$version/Mojito.dmg"
-    }
+    },
+    "notes": "Grant Mojito Accessibility access in System Settings > Privacy & Security when it asks. On a Mac managed by an organisation, this may be blocked."
 }
