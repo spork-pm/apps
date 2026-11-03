@@ -1,0 +1,47 @@
+{
+    "version": "8.3.26701",
+    "description": "Optimise and personalise your Jabra headset",
+    "homepage": "https://www.jabra.com/software-and-services/jabra-direct",
+    "license": "Proprietary",
+    "url": "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.dmg",
+    "pre_install": [
+        "# The download holds a .pkg installer, which spork doesn't run (it needs an admin).",
+        "# Unpack all of it into the package folder and keep every file. spork then installs",
+        "# Jabra Direct.app, copied from the package whose payload is that bundle",
+        "# (com.jabra.directonline), so the unpacked installer stays complete.",
+        "x=\"$dir/.pkg-expand\"",
+        "pkgutil --expand-full \"$dir/JabraDirectSetup.pkg\" \"$x\" || exit 1",
+        "for p in \"$x\"/*; do",
+        "  [ -e \"$dir/${p##*/}\" ] && { echo \"$dir/${p##*/} already exists\" >&2; exit 1; }",
+        "  mv \"$p\" \"$dir/\" || exit 1",
+        "done",
+        "rmdir \"$x\"",
+        "app=",
+        "for p in \"$dir\"/*.pkg/Payload; do",
+        "  id=$(plutil -extract CFBundleIdentifier raw -o - \"$p/Contents/Info.plist\" 2>/dev/null)",
+        "  [ \"$id\" = com.jabra.directonline ] && { app=$p; break; }",
+        "done",
+        "if [ -z \"$app\" ]; then",
+        "  echo 'Jabra Direct (com.jabra.directonline) not found in the installer. Packages in it:' >&2",
+        "  ls \"$dir\" >&2",
+        "  exit 1",
+        "fi",
+        "ditto \"$app\" \"$dir/Jabra Direct.app\""
+    ],
+    "app": "Jabra Direct.app",
+    "notes": [
+        "Only the Jabra Direct app is installed. The drivers, kernel extension and login item that",
+        "Jabra's installer adds need an admin, so softphone call control and some headset features",
+        "may not work. The whole unpacked installer is kept in ~/.spork/apps/jabra-direct/current.",
+        "Jabra Direct updates itself; its download has no fixed version, so a new Jabra release",
+        "can fail spork's checksum check until this drawer is updated."
+    ],
+    "checkver": {
+        "url": "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/jdo.json",
+        "jsonpath": "$.MacVersion"
+    },
+    "autoupdate": {
+        "url": "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.dmg"
+    },
+    "hash": "sha256:606d90a7d94b550c0ba5093aa01a039cb9f55dea53ad05b707cfdc6d9b54f84c"
+}
