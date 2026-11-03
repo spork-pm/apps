@@ -1,0 +1,16 @@
+{
+    "version": "1.1.18",
+    "description": "A macOS menu-bar app for searching GIFs and copying them to the clipboard",
+    "homepage": "https://github.com/nicojan/Quip",
+    "license": "MIT",
+    "url": "https://github.com/nicojan/Quip/releases/download/v1.1.18/Quip-1.1.18.dmg",
+    "hash": "sha256:232e47aff69201d8a2dd7d4a4622668089f86dd6d3b6ece649708d845c13ae45",
+    "app": "Quip.app",
+    "checkver": {
+        "github": "nicojan/Quip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/nicojan/Quip/releases/download/v$version/Quip-$version.dmg"
+    },
+    "notes": "Quip requires you to bring your own Giphy API key https://github.com/nicojan/Quip#bring-your-own-giphy-key"
+}
