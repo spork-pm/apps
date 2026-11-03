@@ -1,0 +1,16 @@
+{
+    "version": "126.10.13",
+    "description": "A vector graphics editor and prototyping tool focusing on use in user interface and user experience design, with an emphasis on real-time collaboration",
+    "homepage": "https://www.figma.com/",
+    "license": "Proprietary",
+    "url": "https://desktop.figma.com/mac/build/Figma-126.10.13.dmg",
+    "app": "Figma.app",
+    "checkver": {
+        "url": "https://desktop.figma.com/win/RELEASES",
+        "regex": "Figma-([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://desktop.figma.com/mac/build/Figma-$version.dmg"
+    },
+    "hash": "sha256:08ed24017fbcdac2614dad39c4b4f962077fe3148795121bbdd10f2794374c9a"
+}
