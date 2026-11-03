@@ -3,14 +3,29 @@
     "description": "A vector graphics editor and prototyping tool focusing on use in user interface and user experience design, with an emphasis on real-time collaboration",
     "homepage": "https://www.figma.com/",
     "license": "Proprietary",
-    "url": "https://desktop.figma.com/mac/build/Figma-126.10.13.dmg",
+    "architecture": {
+        "arm64": {
+            "url": "https://desktop.figma.com/mac-arm/Figma-126.10.13.zip",
+            "hash": "sha256:2f8dfb7f737a750bdc30a0572ae5d3179ff1b8282c6001e5536880b394a63445"
+        },
+        "x86_64": {
+            "url": "https://desktop.figma.com/mac/Figma-126.10.13.zip",
+            "hash": "sha256:f160596f4f16d36a4347d9e01719d771b2fdea3d402b569dd98e5ba2e2b471e5"
+        }
+    },
     "app": "Figma.app",
     "checkver": {
         "url": "https://desktop.figma.com/win/RELEASES",
         "regex": "Figma-([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://desktop.figma.com/mac/build/Figma-$version.dmg"
-    },
-    "hash": "sha256:08ed24017fbcdac2614dad39c4b4f962077fe3148795121bbdd10f2794374c9a"
+        "architecture": {
+            "arm64": {
+                "url": "https://desktop.figma.com/mac-arm/Figma-$version.zip"
+            },
+            "x86_64": {
+                "url": "https://desktop.figma.com/mac/Figma-$version.zip"
+            }
+        }
+    }
 }
