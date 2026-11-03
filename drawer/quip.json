@@ -11,5 +11,6 @@
     },
     "autoupdate": {
         "url": "https://github.com/nicojan/Quip/releases/download/v$version/Quip-$version.dmg"
-    }
+    },
+    "notes": "Quip requires you to bring your own Giphy API key https://github.com/nicojan/Quip#bring-your-own-giphy-key"
 }
