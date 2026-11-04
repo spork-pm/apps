@@ -1,0 +1,30 @@
+{
+    "version": "2026.9.1",
+    "description": "A local-first desktop app for Mac, Windows, and Linux. Works offline, no account required.",
+    "homepage": "https://yaak.app/",
+    "license": "MIT",
+    "architecture": {
+        "arm64": {
+            "url": "https://github.com/mountain-loop/yaak/releases/download/v2026.9.1/Yaak_2026.9.1_aarch64.dmg",
+            "hash": "sha256:9e33bd239292fca9645a4ee6c29ced1cd40ca7a741d9dbcc18a3b1e142594ee8"
+        },
+        "x86_64": {
+            "url": "https://github.com/mountain-loop/yaak/releases/download/v2026.9.1/Yaak_2026.9.1_x64.dmg",
+            "hash": "sha256:82793a5635db3f996a757b52f0f9c49461c6f45c9c36492c07c867ad09ed6ce7"
+        }
+    },
+    "app": "Yaak.app",
+    "checkver": {
+        "github": "mountain-loop/yaak"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://github.com/mountain-loop/yaak/releases/download/v$version/Yaak_$version_aarch64.dmg"
+            },
+            "x86_64": {
+                "url": "https://github.com/mountain-loop/yaak/releases/download/v$version/Yaak_$version_x64.dmg"
+            }
+        }
+    }
+}
