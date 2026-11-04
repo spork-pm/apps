@@ -26,5 +26,6 @@
                 "url": "https://github.com/mountain-loop/yaak/releases/download/v$version/Yaak_$version_x64.dmg"
             }
         }
-    }
+    },
+    "notes": "Yaak is free for personal use. A license is only required when using Yaak at work."
 }
