@@ -1,16 +1,16 @@
 {
-    "version": "1.145.0",
+    "version": "1.145.1",
     "description": "Code editor from Microsoft, with debugging, Git integration and extensions",
     "homepage": "https://code.visualstudio.com",
     "license": "Proprietary",
     "architecture": {
         "arm64": {
-            "url": "https://update.code.visualstudio.com/1.145.0/darwin-arm64/stable#/VSCode-darwin-arm64.zip",
-            "hash": "sha256:26d093ce45934b51eef58a3f55e443e5d5b193e99d7debb228ca51dd2bb129eb"
+            "url": "https://update.code.visualstudio.com/1.145.1/darwin-arm64/stable#/VSCode-darwin-arm64.zip",
+            "hash": "sha256:f323dad2fd0d909b2caa6b779c1639f2d3fa5f86d7a6ccbec56a912a7c6696e3"
         },
         "x86_64": {
-            "url": "https://update.code.visualstudio.com/1.145.0/darwin/stable#/VSCode-darwin.zip",
-            "hash": "sha256:c568867d1883d553bd7626f2ca222dd91a650bbfb39192de6ff2e1b600f68e9e"
+            "url": "https://update.code.visualstudio.com/1.145.1/darwin/stable#/VSCode-darwin.zip",
+            "hash": "sha256:e7816915a68b9ba336b67895cb1ce3a42d60cd2c414f47d44b947acf5e5426ec"
         }
     },
     "app": "Visual Studio Code.app",
