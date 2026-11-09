@@ -13,7 +13,7 @@
     "app": "RStudio.app",
     "checkver": {
         "url": "https://www.rstudio.com/wp-content/downloads.json",
-        "jsonpath": "$.rstudio.open_source.stable.desktop.installer.windows.basename",
+        "jsonpath": "$.rstudio.open_source.stable.desktop.installer.mac.basename",
         "regex": "RStudio-([\\d.-]+).dmg"
     },
     "autoupdate": {
