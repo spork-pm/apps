@@ -1,16 +1,16 @@
 {
-    "version": "32.6.10",
+    "version": "32.7.4",
     "description": "Desktop app for drawing diagrams and flowcharts (diagrams.net)",
     "homepage": "https://www.drawio.com/",
     "license": "GPL-3.0-only",
     "architecture": {
         "arm64": {
-            "url": "https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-arm64-32.6.10.dmg",
-            "hash": "sha256:83e4027837f89bfba9dafbcc5c0e4befa76e2ac7f4e37f7a7b40c817141a6727"
+            "url": "https://github.com/jgraph/drawio-desktop/releases/download/v32.7.4/draw.io-arm64-32.7.4.dmg",
+            "hash": "sha256:b0ba01224cdc4817ebf218d73b2a45ff3569f8c9135ad422c5157655062900b3"
         },
         "x86_64": {
-            "url": "https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-x64-32.6.10.dmg",
-            "hash": "sha256:b2e6be1e323177d40cc2bac4e0d2fcf436ece1f4dc6fe648d164679d4ac9c84b"
+            "url": "https://github.com/jgraph/drawio-desktop/releases/download/v32.7.4/draw.io-x64-32.7.4.dmg",
+            "hash": "sha256:ff7de8cf1cfe64e39683d042dfbb1677fd39463a304adfb6c86681dc253d7453"
         }
     },
     "app": "draw.io.app",
