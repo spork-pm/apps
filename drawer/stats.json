@@ -1,10 +1,10 @@
 {
-    "version": "3.1.0",
+    "version": "3.1.1",
     "description": "macOS system monitor in your menu bar (open source alternative to iStat Menus)",
     "homepage": "https://github.com/exelban/stats",
     "license": "MIT",
-    "url": "https://github.com/exelban/stats/releases/download/v3.1.0/Stats.dmg",
-    "hash": "sha256:a5f16b6606c8bd1fc847439a3b4a507153837167cb333514954882c2bc31e0e7",
+    "url": "https://github.com/exelban/stats/releases/download/v3.1.1/Stats.dmg",
+    "hash": "sha256:2fbe64690251e5c92102a2091052c76f440561397fcb7e0246821c331386bdd9",
     "app": "Stats.app",
     "checkver": {
         "github": "exelban/stats"
