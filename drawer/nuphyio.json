@@ -1,0 +1,9 @@
+{
+    "version": "2.2.9",
+    "homepage": "https://drive.nuphy.io/",
+    "description": "NuPhyIO lets you configure your keyboard keys, and knob to your preference, and adjust your lights",
+    "license": "Proprietary",
+    "url": "https://cdn.nuphy.io/upgrade/mac/NuPhyIO-2.2.9-1793684567946.dmg",
+    "hash": "sha256:b56195b883688657aa845e954a43381140d9780c7cad2a594e142310e33a5cef",
+    "app": "NuPhyIO.app"
+}
