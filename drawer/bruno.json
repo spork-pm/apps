@@ -1,16 +1,16 @@
 {
-    "version": "4.3.0",
+    "version": "4.4.0",
     "description": "Opensource IDE For Exploring and Testing APIs",
     "homepage": "https://www.usebruno.com/",
     "license": "MIT",
     "architecture": {
         "arm64": {
-            "url": "https://github.com/usebruno/bruno/releases/download/v4.3.0/bruno_4.3.0_arm64_mac.zip",
-            "hash": "sha256:8d87a7c21f5c4723d26975c11042592d5bf503e1dc87aa5bba9e8067e551d2dc"
+            "url": "https://github.com/usebruno/bruno/releases/download/v4.4.0/bruno_4.4.0_arm64_mac.zip",
+            "hash": "sha256:d2d039b78bd9f7f3af615c636b16ed0f3a77b8071165014043c46d302a5d289e"
         },
         "x86_64": {
-            "url": "https://github.com/usebruno/bruno/releases/download/v4.3.0/bruno_4.3.0_x64_mac.zip",
-            "hash": "sha256:d3c1f4a7ad358a7b7256a5bb59982a9596fda1c3517961ca74609aed7b29409d"
+            "url": "https://github.com/usebruno/bruno/releases/download/v4.4.0/bruno_4.4.0_x64_mac.zip",
+            "hash": "sha256:4538a0415f12f5fc2c5588ce9faf08ce6ce0288bd81c91e39cad831d5cd0f324"
         }
     },
     "app": "Bruno.app",
