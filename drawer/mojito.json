@@ -1,10 +1,10 @@
 {
-    "version": "1.10.1",
+    "version": "1.10.2",
     "description": "Type :emoji:, ::symbol::, and :::gif::: shortcodes anywhere on macOS",
     "homepage": "https://mojito.wells.ee/",
     "license": "Proprietary",
-    "url": "https://github.com/wr/mojito/releases/download/v1.10.1/Mojito.dmg",
-    "hash": "sha256:ebb7e73e9651779762f9527f9ba8479c826ecbe876c80213f6831a4303870153",
+    "url": "https://github.com/wr/mojito/releases/download/v1.10.2/Mojito.dmg",
+    "hash": "sha256:4d32ee257fa6540507e3736555bf9c0eee7afb2835e53482329a573e08609b7d",
     "app": "Mojito.app",
     "checkver": {
         "github": "wr/mojito"
