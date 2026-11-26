@@ -13,8 +13,8 @@
         }
     },
     "post_install": [
-      "sed -i -E 's|/Applications|/|g' ~/Applications/LM\\ Studio.app/Contents/Resources/app/.webpack/main/index.js",
-      "/usr/bin/codesign --force --deep --sign - ~/Applications/LM\\ Studio.app"
+      "sed -i -E 's|/Applications|/|g' $appdir/LM\\ Studio.app/Contents/Resources/app/.webpack/main/index.js",
+      "/usr/bin/codesign --force --deep --sign - $appdir/LM\\ Studio.app"
     ],
     "app": "LM Studio.app",
     "checkver": {
