@@ -1,0 +1,33 @@
+{
+    "version": "0.4.29-2",
+    "description": "Discover, download, and run local LLMs (llama.cpp, MLX). Chat UI and OpenAI-compatible local API server.",
+    "homepage": "https://lmstudio.ai",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://lmstudio.ai/app-terms"
+    },
+    "architecture": {
+        "arm64": {
+            "url": "https://installers.lmstudio.ai/darwin/arm64/0.4.29-2/LM-Studio-0.4.29-2-arm64.dmg",
+            "hash": "sha256:8120d709888370e86e46791b8445482e28615dab5f3e8972a9a22e0f90fcdb14"
+        }
+    },
+    "post_install": [
+      "sed -i -E 's|/Applications|/|g' $appdir/LM\\ Studio.app/Contents/Resources/app/.webpack/main/index.js",
+      "/usr/bin/codesign --force --deep --sign - $appdir/LM\\ Studio.app"
+    ],
+    "app": "LM Studio.app",
+    "checkver": {
+        "url": "https://lmstudio.ai/download",
+        "regex": "\\\\\"version\\\\\":\\\\\"(?<ver>[\\d.]+)\\\\\",\\\\\"build\\\\\":\\\\\"(?<build>\\d+)\\\\\"",
+        "replace": "${ver}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://installers.lmstudio.ai/darwin/arm64/$version/LM-Studio-$version-arm64.dmg"
+            }
+        }
+    },
+    "notes": "LM Studio checks that it is installed in /Applications normally but this manifest patches during post_install step"
+}
