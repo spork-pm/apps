@@ -3,21 +3,13 @@
     "description": "A tiny macOS menu bar app that tracks your dev servers across projects",
     "homepage": "https://portmenu.dev/",
     "license": "MIT",
-    "architecture": {
-        "arm64": {
-            "url": "https://github.com/wieandteduard/port-menu/releases/download/v0.8.10/PortMenu-0.8.10.dmg",
-            "hash": "sha256:f36bdda52de346c86711fa72f094d27cbcaed5c1ee8dcc2890cbafd7717a354c"
-        }
-    },
+    "url": "https://github.com/wieandteduard/port-menu/releases/download/v0.8.10/PortMenu-0.8.10.dmg",
+    "hash": "sha256:f36bdda52de346c86711fa72f094d27cbcaed5c1ee8dcc2890cbafd7717a354c",
     "app": "Port Menu.app",
     "checkver": {
         "github": "wieandteduard/port-menu"
     },
     "autoupdate": {
-        "architecture": {
-            "arm64": {
-                "url": "https://github.com/wieandteduard/port-menu/releases/download/v$version/PortMenu-$version.dmg"
-            }
-        }
+        "url": "https://github.com/wieandteduard/port-menu/releases/download/v$version/PortMenu-$version.dmg"
     }
 }
