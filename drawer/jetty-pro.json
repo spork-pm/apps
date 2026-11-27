@@ -12,5 +12,6 @@
     },
     "autoupdate": {
         "url": "https://hypercritical.co/jetty-pro/downloads/Jetty%20Pro.zip"
-    }
+    },
+    "notes": "Jetty Pro requires a license to be used"
 }
