@@ -8,7 +8,7 @@
     "app": "Jetty Pro.app",
     "checkver": {
         "url": "https://hypercritical.co/jetty-pro/",
-        "regex": "Releases.*?id=\"(?<version>[\\d.]+(?:-\\d+)?)\""
+        "regex": "<dl id=\"(?<version>[\\d.]+)\">"
     },
     "autoupdate": {
         "url": "https://hypercritical.co/jetty-pro/downloads/Jetty%20Pro.zip"
