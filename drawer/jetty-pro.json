@@ -1,0 +1,16 @@
+{
+    "version": "1.0.4",
+    "description": "Jetty Pro creates customizable Dock-like floating palettes",
+    "homepage": "https://hypercritical.co/jetty-pro/",
+    "license": "Proprietary",
+    "url": "https://hypercritical.co/jetty-pro/downloads/Jetty%20Pro.zip",
+    "hash": "sha256:16c0ddd78f245f799a8c446c5c2de5fec22f13e3638ecb0341eed3b5deacd5d6",
+    "app": "Jetty Pro.app",
+    "checkver": {
+        "url": "https://hypercritical.co/jetty-pro/",
+        "regex": "<dt id=\"(?<version>[\\d.]+)\">"
+    },
+    "autoupdate": {
+        "url": "https://hypercritical.co/jetty-pro/downloads/Jetty%20Pro.zip"
+    }
+}
